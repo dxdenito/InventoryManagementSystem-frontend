@@ -28,7 +28,7 @@ function Inventory(){
         try {
             if (!shopId) return;
 
-            const response = await api.get("/products", {
+            const response = await api.get("/products/", {
                 params: { shop_id: shopId }
             });
 
@@ -40,7 +40,7 @@ function Inventory(){
 
     const fetchShops = async () => {
         try {
-            const response = await api.get("/shops");
+            const response = await api.get("/shops/");
             setShops(response.data);
 
             // 🔥 set default shop
@@ -69,7 +69,7 @@ function Inventory(){
         setError("");
         if (!quantity) return;
         try {
-            await api.post("/inventory/add_inventory", {product_id: id, quantity: parseInt(quantity)});
+            await api.post("/inventory/add_inventory/", {product_id: id, quantity: parseInt(quantity)});
             fetchProducts();
         }
         catch(error){
@@ -81,7 +81,7 @@ function Inventory(){
         setError("");
         if (!quantity) return;
         try {
-            await api.post("/inventory/remove_inventory", {product_id: id, quantity: parseInt(quantity)});
+            await api.post("/inventory/remove_inventory/", {product_id: id, quantity: parseInt(quantity)});
             fetchProducts();
         }
         catch(error){

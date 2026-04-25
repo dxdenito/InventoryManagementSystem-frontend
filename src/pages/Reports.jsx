@@ -7,7 +7,7 @@ function Reports() {
   const [shopId, setShopId] = useState("");
 
   const fetchData = async () => {
-    let endpoint = `/reports/${activeTab}`;
+    let endpoint = `/reports/${activeTab}/`;
 
     const res = await api.get(endpoint, {
       params: shopId? { shop_id: shopId }:{}
