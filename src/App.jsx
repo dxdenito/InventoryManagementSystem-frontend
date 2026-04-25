@@ -1,9 +1,9 @@
 
-import Layout from "./components/layout"
+import Layout from "./components/Layout"
 
 import Test from "./components/Test"
 import {HashRouter as Router,Routes, Route} from "react-router-dom"
-import Dashboard from "./pages/dashboard"
+import Dashboard from "./pages/Dashboard"
 import Inventory from "./pages/Inventory"
 import Users from "./pages/Users"
 import Settings from "./pages/Settings"
