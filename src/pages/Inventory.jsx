@@ -69,7 +69,7 @@ function Inventory(){
         setError("");
         if (!quantity) return;
         try {
-            await api.post("/inventory/add_inventory/", {product_id: id, quantity: parseInt(quantity)});
+            await api.post("/inventory/add_inventory", {product_id: id, quantity: parseInt(quantity)});
             fetchProducts();
         }
         catch(error){
@@ -81,7 +81,7 @@ function Inventory(){
         setError("");
         if (!quantity) return;
         try {
-            await api.post("/inventory/remove_inventory/", {product_id: id, quantity: parseInt(quantity)});
+            await api.post("/inventory/remove_inventory", {product_id: id, quantity: parseInt(quantity)});
             fetchProducts();
         }
         catch(error){
