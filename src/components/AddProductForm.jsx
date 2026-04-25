@@ -37,7 +37,7 @@ function AddProductForm({ shopId, refreshProducts, closeModal }) {
         payload.shop_id = shopId;
       }
 
-      await api.post("/products", payload);
+      await api.post("/products/", payload);
 
       // ✅ Reset form
       setProductName("");
