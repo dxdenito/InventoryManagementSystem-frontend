@@ -20,7 +20,7 @@ function Shops() {
       setIsLoading(true);
       setError(null);
 
-      const res = await api.get("/shops",{
+      const res = await api.get("/shops/",{
         params:{
           status: statusFilter
         }

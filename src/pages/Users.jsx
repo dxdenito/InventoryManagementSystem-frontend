@@ -19,7 +19,7 @@ function Users(){
     const fetchEmployees = async()=>{
         setLoading(true);
         try {
-            const response = await api.get('/employees', {
+            const response = await api.get('/employees/', {
                 params:{
                     status: statusFilter
                 },
@@ -35,7 +35,7 @@ function Users(){
 
     const fetchShops = async()=>{
         try {
-            const response = await api.get('/shops', {
+            const response = await api.get('/shops/', {
                 
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`

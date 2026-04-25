@@ -19,7 +19,7 @@ function Products() {
         try {
             if (!shopId) return;
 
-            const response = await api.get("/products", {
+            const response = await api.get("/products/", {
                 params: { shop_id: shopId, status: statusFilter }
             });
 
@@ -31,7 +31,7 @@ function Products() {
 
     const fetchShops = async () => {
         try {
-            const response = await api.get("/shops");
+            const response = await api.get("/shops/");
             setShops(response.data);
 
             // 🔥 set default shop
